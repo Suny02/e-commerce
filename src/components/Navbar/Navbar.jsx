@@ -13,9 +13,9 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import logo from "../../img/favicon.ico";
-//import { FiUser } from "react-icons/fi";
 import { BsSuitHeart } from "react-icons/bs";
 import { BsBag } from "react-icons/bs";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { DarkModeBtn } from "../DarkMode/DarkModeBtn";
 import { useSelector } from "react-redux";
 import SideMenu from "../Sidebar/Sidebar";
@@ -53,6 +53,7 @@ const Navbar = () => {
   const handleSignup = () => {
     navigate("/register");
   };
+
   return (
     <div className="Navbar">
       <Flex
@@ -82,15 +83,16 @@ const Navbar = () => {
           </Button>
         )}
         <Box mr={["5", "6", "7", "9"]}>
-          {" "}
           <DarkModeBtn />
         </Box>
       </Flex>
+
       <Flex fontWeight="bold">
         <HStack onClick={handleHome} cursor={"pointer"}>
-          <Image width={["25px"]} m={5} src={logo} alt="logo" />
+          <Image width={["25px"]} m={5} src={logo} alt="Sunil Karrenoll Logo" />
         </HStack>
         <Spacer />
+
         {isLargerThan ? (
           <HStack>
             <NavLink
@@ -159,16 +161,6 @@ const Navbar = () => {
         <Spacer />
 
         <HStack>
-          {/* <Box>
-            <Icon
-              w={6}
-              h={6}
-              my="4"
-              mx={isLargerThan ? "3" : "1"}
-              as={BsSearch}
-            />
-          </Box> */}
-
           <Box onClick={handleHeart}>
             <Flex
               onClick={handleCart}
@@ -197,6 +189,7 @@ const Navbar = () => {
               </Text>
             </Flex>
           </Box>
+
           <Box>
             <Flex
               onClick={handleCart}
@@ -218,6 +211,19 @@ const Navbar = () => {
               </Text>
             </Flex>
           </Box>
+
+          {/* Sunil's GitHub & LinkedIn */}
+          <Box>
+            <a href="https://github.com/Suny02" target="_blank" rel="noreferrer">
+              <Icon as={FaGithub} w={6} h={6} my="4" mx="2" cursor="pointer" />
+            </a>
+          </Box>
+          <Box>
+            <a href="https://www.linkedin.com/in/sunil-karrenolla/" target="_blank" rel="noreferrer">
+              <Icon as={FaLinkedin} w={6} h={6} my="4" mx="2" cursor="pointer" />
+            </a>
+          </Box>
+
           <Box> {!isLargerThan && <SideMenu colorMode={colorMode} />}</Box>
         </HStack>
       </Flex>
@@ -226,5 +232,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-//BsSearch Icon
