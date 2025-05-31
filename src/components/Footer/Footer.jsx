@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Box,
   Flex,
   Heading,
@@ -9,7 +8,6 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
-import portfolio from "../../img/portfolio.png";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 // import { GiCondorEmblem } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -63,26 +61,19 @@ const Footer = () => {
           ) : null}
           <Box mt="1rem" display={"flex"} gap="1rem" justifyContent={"center"}>
             <a
-              href="https://www.linkedin.com/in/naresh-rajput/"
+              href="https://www.linkedin.com/in/sunil-karrenolla/"
               target={"_blank"}
               rel="noreferrer"
             >
               <Icon w={9} h={9} my="1rem" as={BsLinkedin} />
             </a>
             <a
-              href="https://github.com/nmewada01"
+              href="https://github.com/Suny02/"
               target={"_blank"}
               rel="noreferrer"
             >
               <Icon w={9} h={9} my="1rem" as={BsGithub} />
-            </a>
-            <a
-              href="https://nmewada01.github.io/portfolio/"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <Avatar w={10} h={10} my="1rem" bg="white" src={portfolio} />
-            </a>
+            </a>     
           </Box>
         </Flex>
       </Box>
