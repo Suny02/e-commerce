@@ -31,7 +31,7 @@ const displayRazorpay = async (
     return;
   }
   const options = {
-    key: "rzp_test_GZ5gpKSKDoFi4K",
+    key: "rzp_test_lUpOJ9wzNTthT6",
     amount: amount * 100,
     currency: "INR",
     name: "Sports-K",
